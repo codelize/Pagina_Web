@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
+    <title>Página para treino</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Carros</li>
+                <li>Fale Conosco</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <div class="list">
+            <div class="item active" data-index="0">
+                <div class="car-img">
+                    <img src="img/1 (1).png" alt="Car">
+                </div>
+                <div class="content">
+                    <p class="car-information">Unico Dono</p>
+                    <h2>911 Turbo</h2>
+                    <p class="description">O Porsche 911 Turbo é a definição de sofisticação e performance. Com um design icônico e um motor poderoso, ele oferece uma experiência de condução incomparável. Seu interior luxuoso e tecnológico garante conforto e controle, enquanto a segurança de ponta proporciona tranquilidade. O 911 Turbo é a expressão máxima do prazer de dirigir.</p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+            <div class="item" data-index="1">
+                <div class="car-img">
+                    <img src="img/2.png" alt="Car">
+                </div>
+                <div class="content">
+                    <p class="car-information">Conversível</p>
+                    <h2>Ferrari</h2>
+                    <p class="description">Com linhas elegantes e uma potência que ecoa seu legado nas pistas de corrida, a Ferrari personifica a fusão entre arte e engenharia automotiva. Cada curva, cada detalhe é uma expressão de excelência italiana, projetada para elevar os sentidos e proporcionar uma experiência de condução incomparável.</p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+            <div class="item" data-index="2">
+                <div class="car-img">
+                    <img src="img/3.png" alt="Car">
+                </div>
+                <div class="content">
+                    <p class="car-information">2015</p>
+                    <h2>Lamborghini</h2>
+                    <p class="description">A Lamborghini é mais do que um carro; é uma experiência transcendental. Com um design arrojado e uma potência avassaladora, cada modelo da Lamborghini é uma manifestação do extraordinário. Cada linha, cada curva é uma expressão de pura paixão e desempenho, criada para aqueles que buscam a emoção pura da velocidade e da elegância.</p>
+                    <button class="information">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="arrows">
+            <button class="left"><img src="img/arrow.png" alt="Left Arrow"></button>
+            <button class="right"><img src="img/arrow.png" alt="Right Arrow"></button>
+        </div>
+
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active" data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

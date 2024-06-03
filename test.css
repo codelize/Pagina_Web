@@ -1,0 +1,265 @@
+        /* CSS Aqui */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            background-color: black;
+            color: #fff;
+            font-size: 16px;
+            overflow: hidden;
+        }
+
+        header {
+            position: fixed;
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: grid;
+            align-items: center;
+            grid-template-columns: 1fr 600px;
+            gap: 5%;
+            z-index: 2;
+        }
+
+        header img {
+            width: 250px;
+        }
+
+        header nav ul {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+        }
+
+        section {
+            background-image: radial-gradient(#0b020f, #1b084e);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        section .list {
+            width: 70vw;
+            height: 100%;
+            margin: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        section .list::before {
+            content: '';
+            position: absolute;
+            height: 100px;
+            width: calc(100% - 50px);
+            top: 50%;
+            left: 25px;
+            border-top: 1px solid #fff;
+        }
+
+        section .car-img {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100%;
+        }
+
+        section .car-img img {
+            width: 800px; /* Ajusta o tamanho da imagem */
+            height: auto;
+            object-fit: contain;
+            transform: rotate(-24deg); /* Adiciona a rotação aqui */
+            
+        }
+
+        section .item {
+            opacity: 0;
+            transition: opacity 0.5s, transform 0.5s;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        section .item.active {
+            opacity: 1;
+            position: relative;
+            transform: scale(1);
+        }
+
+        /* Ajustes para posicionar o conteúdo abaixo das setas, com um espaço de 30 pixels entre o conteúdo e as setas */
+        section .item .content {
+            position: absolute;
+            bottom: 30px; /* Ajusta a distância do conteúdo até a parte inferior */
+            right: 20px; /* Ajusta a distância do conteúdo até o lado direito */
+        }
+
+        /* Ajustes para os elementos dentro de .content */
+        section .item .content * {
+            margin-bottom: 5px; /* Adiciona um espaçamento entre os elementos */
+        }
+
+    section .content {
+        position: absolute;
+        right: 20px; /* Posiciona o conteúdo no canto lateral direito */
+        bottom: 40px; /* Ajuste para posicionar o conteúdo mais acima */
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end; /* Alinha o texto à direita */
+        gap: 5px;
+    }
+    
+    section .car-information {
+        position: relative; /* Mantém a posição relativa */
+        bottom: 310px; /* Ajusta a posição acima do h2 */
+    }
+    
+ 
+    section .description,
+    section .information {
+        position: relative; /* Alterado de absolute para relative */
+        bottom: 120px; /* Ajuste para posicionar os elementos mais acima */
+        right: 0; /* Ajusta a distância do lado direito */
+    }
+
+        section .content p {
+            font-weight: bold;
+        }
+
+        section .content h2 { 
+
+            position: absolute;
+            bottom: calc(100% + 173px); /* Posiciona o título acima da seta */
+            right: 2px; /* Ajusta a distância do lado direito */
+            font-size: 5em;
+            line-height: 1em;
+            font-family: "League+Gothic", sans-serif;
+        }
+
+        section .description {
+            color: #828086;
+            font-size: 12px;
+            text-align: right;
+            max-width: 400px;
+        }
+
+        section .information {
+            border-radius: 30px;
+            height: 35px;
+            width: 120px;
+            text-transform: uppercase;
+            border: 2px solid #36343d;
+            background-color: #beff1b;
+            color: #0b020f;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: "League+Gothic", sans-serif;
+        }
+
+        section .button img {
+            transform: scale(-1);
+        }
+
+        .arrows {
+            width: 70vw;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .arrows button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .arrows button.left {
+            transform: translateX(-25px);
+        }
+
+        .arrows button.right {
+            transform: translateX(25px);
+        }
+
+        .arrows button:hover {
+            background-color: #beff1b;
+        }
+
+        .arrows button img {
+            width: 30px;
+        }
+
+        .arrows button.left img {
+            transform: scaleX(-1);
+        }
+
+        .arrows button.right img {
+            transform: scaleX(1);
+        }
+
+        .arrows button:focus {
+            outline: none;
+        }
+
+        .arrows button:active {
+            transform: scale(0.9);
+        }
+
+        .indicators {
+            position: absolute;
+            top: 60%;
+            bottom: 50px; /* Posiciona abaixo da linha das setas */
+            left: 8%;
+            transform: translateX(-50%); /* Alinha o centro horizontalmente */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .indicators .number {
+            font-size: 5em;
+            margin-bottom: 10px;
+            font-family: "League+Gothic", sans-serif;
+        }
+
+        .indicators ul {
+            display: flex;
+            gap: 10px;
+        }
+
+        .indicators ul li {
+            width: 50px;
+            height: 5px;
+            background-color: #828086;
+            border-radius: 5px;
+            transition: 0.5s;
+        }   
+
+        .indicators ul li.active {
+            background-color: #beff1b;
+        }
+
+        .reverse {
+            transform: translateX(100%) scale(1);
+        }
